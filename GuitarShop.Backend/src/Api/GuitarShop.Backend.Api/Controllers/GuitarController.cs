@@ -25,7 +25,7 @@ namespace GuitarShop.Backend.Api.Controllers
         public IActionResult AddGuitar(Guitar guitar)
         {
             _facade.AddGuitar(guitar);
-            return Ok(guitar.GID);
+            return Ok(guitar.Id);
         }
 
     }

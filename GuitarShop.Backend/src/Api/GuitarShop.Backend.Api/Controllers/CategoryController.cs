@@ -24,7 +24,7 @@ namespace GuitarShop.Backend.Api.Controllers
         public IActionResult AddCategory(Category category)
         {
             _facade.AddCategory(category);
-            return Ok(category.GID);
+            return Ok(category.Id);
         }
     }
 }

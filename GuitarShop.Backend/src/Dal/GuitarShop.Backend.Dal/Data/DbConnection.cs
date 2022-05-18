@@ -11,7 +11,7 @@ namespace GuitarShop.Backend.Dal.Data
     {
         public static SqlConnection CreateConnection()
         {
-            return new SqlConnection("Data Source=Andrey-PC100;Initial Catalog=Guitar;Integrated Security=True;");
+            return new SqlConnection("Data Source=Andrey-PC100;Initial Catalog=GuitarShop;Integrated Security=True;");
         }
     }
 }

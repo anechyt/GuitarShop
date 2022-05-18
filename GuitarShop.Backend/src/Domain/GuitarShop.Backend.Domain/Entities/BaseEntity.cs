@@ -8,7 +8,7 @@ namespace GuitarShop.Backend.Domain.Entities
 {
     public class BaseEntity
     {
-        public Guid GID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

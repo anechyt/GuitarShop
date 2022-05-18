@@ -12,6 +12,6 @@ namespace GuitarShop.Backend.Domain.Entities
         public int NumberOfStrings { get; set; }
         public string Color { get; set; }
         public decimal Price { get; set; }
-        public Category CategoryGID { get; set; }
+        public int CategoryId { get; set; }
     }
 }
