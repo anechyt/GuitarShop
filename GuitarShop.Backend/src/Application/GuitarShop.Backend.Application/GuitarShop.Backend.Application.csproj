@@ -4,4 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dal\GuitarShop.Backend.Dal\GuitarShop.Backend.Dal.csproj" />
+    <ProjectReference Include="..\..\Domain\GuitarShop.Backend.Domain\GuitarShop.Backend.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
