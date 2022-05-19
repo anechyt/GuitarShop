@@ -29,6 +29,7 @@ namespace GuitarShop.Backend.Api
         {
             services.AddSingleton<Facade>();
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GuitarShop.Backend.Api", Version = "v1" });
@@ -48,6 +49,7 @@ namespace GuitarShop.Backend.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(builder => builder.AllowAnyOrigin());
 
             app.UseAuthorization();
 
