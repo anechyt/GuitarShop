@@ -41,7 +41,8 @@
     border-radius: var(--border-radius);
     cursor: pointer;
     outline: none;
-    background: none;
+    background: black;
     font-family: inherit;
     font-size: inherit;
+    color: var(--color-white);
 }

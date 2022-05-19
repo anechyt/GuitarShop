@@ -22,7 +22,7 @@ class Guitars {
             </ul>
         `;
 
-        ROOT_GUITARS.innerHTML = html;
+        ROOT_GUITARS[0].innerHTML = html;
     
     }
 }

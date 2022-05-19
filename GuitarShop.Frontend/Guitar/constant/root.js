@@ -1,1 +1,1 @@
-const ROOT_GUITARS = document.getElementById('guitars');
+const ROOT_GUITARS = document.getElementsByClassName('guitars');

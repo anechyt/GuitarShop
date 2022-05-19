@@ -1,0 +1,32 @@
+a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    color:#fff;
+}
+.header__section{
+    display: flex;
+    align-items: center;
+}
+.header__item{
+    padding: 10px 15px;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.header__item:hover{
+    background-color:gray;
+    border-radius: 4px;
+}
+.headerlogo{
+    font-weight: bold;
+    font-size:xx-large;
+}
+.headerButton{
+    cursor: pointer;
+}
