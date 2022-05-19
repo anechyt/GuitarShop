@@ -25,5 +25,12 @@ namespace GuitarShop.Backend.Application.Common.Services
                 connection.Execute("INSERT INTO Guitar (Name, Size, NumberOfStrings, Color, Price, PhotoUrl, CategoryId) VALUES(@Name, @Size, @NumberOfStrings, @Color, @Price, @PhotoUrl, @CategoryId)", guitar);
             }
         }
+        public IEnumerable<Guitar> GetClassicGuitar()
+        {
+            using(var connection = DbConnection.CreateConnection())
+            {
+                return connection.Query<Guitar>("SELECT * FROM Guitar WHERE CategoryId = 1");
+            }
+        }
     }
 }

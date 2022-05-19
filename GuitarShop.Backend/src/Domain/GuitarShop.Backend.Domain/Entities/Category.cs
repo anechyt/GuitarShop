@@ -8,6 +8,6 @@ namespace GuitarShop.Backend.Domain.Entities
 {
     public class Category : BaseEntity
     {
-
+        public string PhotoUrl { get; set; }
     }
 }

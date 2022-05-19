@@ -28,5 +28,12 @@ namespace GuitarShop.Backend.Api.Controllers
             return Ok(guitar.Id);
         }
 
+        [HttpGet("getclassicguitars")]
+        public IActionResult GetClassicGuitar()
+        {
+            var result = _facade.GetClassicGuitar();
+            return Ok(result);
+        }
+
     }
 }

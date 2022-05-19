@@ -22,7 +22,7 @@ namespace GuitarShop.Backend.Application.Common.Services
         {
             using( var connection = DbConnection.CreateConnection())
             {
-                connection.Execute("INSERT INTO Category (Name) VALUES(@Name)", category);
+                connection.Execute("INSERT INTO Category (Name, PhotoUrl) VALUES(@Name, @PhotoUrl)", category);
             }
         }
     }

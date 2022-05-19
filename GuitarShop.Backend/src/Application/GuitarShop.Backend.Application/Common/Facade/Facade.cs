@@ -34,6 +34,10 @@ namespace GuitarShop.Backend.Application.Common.Facade
         {
             _categoryService.AddCategory(category);
         }
+        public IEnumerable<Guitar> GetClassicGuitar()
+        {
+            return _guitarService.GetClassicGuitar();
+        }
 
     }
 }
