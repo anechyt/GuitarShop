@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  guitarshop.backend.api:
+    image: ${DOCKER_REGISTRY-}guitarshopbackendapi
+    build:
+      context: .
+      dockerfile: src/Api/GuitarShop.Backend.Api/Dockerfile
