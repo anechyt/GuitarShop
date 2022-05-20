@@ -32,5 +32,19 @@ namespace GuitarShop.Backend.Application.Common.Services
                 return connection.Query<Guitar>("SELECT * FROM Guitar WHERE CategoryId = 1");
             }
         }
+        public IEnumerable<Guitar> GetUkuleleGuitars()
+        {
+            using (var connection = DbConnection.CreateConnection())
+            {
+                return connection.Query<Guitar>("SELECT * FROM Guitar WHERE CategoryId = 2");
+            }
+        }
+        public IEnumerable<Guitar> GetElectricGuitars()
+        {
+            using (var connection = DbConnection.CreateConnection())
+            {
+                return connection.Query<Guitar>("SELECT * FROM Guitar WHERE CategoryId = 3");
+            }
+        }
     }
 }

@@ -38,6 +38,14 @@ namespace GuitarShop.Backend.Application.Common.Facade
         {
             return _guitarService.GetClassicGuitar();
         }
+        public IEnumerable<Guitar> GetUkuleleGuitars()
+        {
+            return _guitarService.GetUkuleleGuitars();
+        }
+        public IEnumerable<Guitar> GetElectricGuitars()
+        {
+            return _guitarService.GetElectricGuitars();
+        }
 
     }
 }

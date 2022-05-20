@@ -34,6 +34,17 @@ namespace GuitarShop.Backend.Api.Controllers
             var result = _facade.GetClassicGuitar();
             return Ok(result);
         }
-
+        [HttpGet("getukuleleguitars")]
+        public IActionResult GetUkuleleGuitars()
+        {
+            var result = _facade.GetUkuleleGuitars();
+            return Ok(result);
+        }
+        [HttpGet("getelectricguitars")]
+        public IActionResult GetElectricGuitars()
+        {
+            var result = _facade.GetElectricGuitars();
+            return Ok(result);
+        }
     }
 }
