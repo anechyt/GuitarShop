@@ -21,8 +21,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuitarShop.Backend.Application", "src\Application\GuitarShop.Backend.Application\GuitarShop.Backend.Application.csproj", "{2F5012A0-8154-428E-BDBA-9FC9F6702693}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{54D140D0-1007-47F9-BF0F-508E05DA3B71}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,10 +43,6 @@ Global
 		{2F5012A0-8154-428E-BDBA-9FC9F6702693}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F5012A0-8154-428E-BDBA-9FC9F6702693}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F5012A0-8154-428E-BDBA-9FC9F6702693}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54D140D0-1007-47F9-BF0F-508E05DA3B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54D140D0-1007-47F9-BF0F-508E05DA3B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54D140D0-1007-47F9-BF0F-508E05DA3B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54D140D0-1007-47F9-BF0F-508E05DA3B71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

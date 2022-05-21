@@ -1,12 +1,17 @@
 version: '3.4'
 
 services:
+  cachedb:
+    container_name: cachedb
+    restart: always    
+    ports:
+        - "6379:6379"
+
   guitarshop.backend.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - "CacheSettings:ConnectionString=localhost:6379"
+    depends_on:
+      - cachedb
     ports:
-      - "80"
-      - "443"
-    volumes:
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - "8000:80"

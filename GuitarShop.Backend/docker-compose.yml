@@ -1,6 +1,9 @@
 version: '3.4'
 
 services:
+  cachedb:
+    image: redis:alpine
+
   guitarshop.backend.api:
     image: ${DOCKER_REGISTRY-}guitarshopbackendapi
     build:
