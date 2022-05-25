@@ -13,18 +13,14 @@ class Guitars {
                     <span class="guitars-element__price"> 🦄 ${price.toLocaleString()} Единорогов</span>
                     <button id="${id}" class="guitars-element__btn">Добавить в корзину</button>
                 </li>
-            `;
-            
+            `;  
         });
-
         const html = `
             <ul class="guitars-container">
                 ${htmlcatalog}
             </ul>
         `;
-
         ROOT_GUITARS[0].innerHTML = html;
-    
     }
 }
 
@@ -44,7 +40,6 @@ class GuitarsUkulele {
                     <button id="${id}" class="guitars-element__btn">Добавить в корзину</button>
                 </li>
             `;
-            
         });
 
         const html = `
@@ -72,9 +67,7 @@ class GuitarsElectric {
                     <button id="${id}" class="guitars-element__btn">Добавить в корзину</button>
                 </li>
             `;
-            
         });
-
         const html = `
             <ul class="guitars-container">
                 ${htmlcatalog}

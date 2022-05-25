@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
+
 
 namespace GuitarShop.Backend.Api
 {
@@ -22,7 +24,16 @@ namespace GuitarShop.Backend.Api
         {
             services.AddSingleton<Facade>();
             services.AddControllers();
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyHeader();
+                    policy.AllowAnyMethod();
+                    policy.AllowAnyOrigin();
+                });
+            });
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GuitarShop.Backend.Api", Version = "v1" });
@@ -41,7 +52,8 @@ namespace GuitarShop.Backend.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors(builder => builder.AllowAnyOrigin());
+            
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseAuthorization();
 

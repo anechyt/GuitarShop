@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header__section">
+            <div class="header__item headerlogo">
+               Guitar Shop 
+            </div>
+            <div class="header__item headerButton">
+               <a href="home.html">Home</a> 
+            </div>
+            <div class="header__item headerButton">
+                <a href="catalog.html">Catalog</a> 
+             </div>
+             <div class="header__item headerButton">
+                <a href="about.html">About us</a> 
+             </div>
+             <div class="header__item headerButton">
+                <a href="addguitar.html">Add Guitar</a> 
+             </div>
+        </div>
+    </div>
+    <form class="form" id="myForm">
+      <input type="text" placeholder="Name" id="myName">
+      <input type="number" placeholder="Size" id="mySize" step=".01">
+      <input type="number" placeholder="NumberOfStrings" id="myNumberOfStrings" step=".01">
+      <input type="text" placeholder="Color" id="myColor">
+      <input type="number" placeholder="Price" id="myPrice" step=".01">
+      <input type="text" placeholder="PhotoUrl" id="myPhotoUrl">
+      <input type="number" placeholder="CategoryId" id="myCategoryId" step=".01">
+      <button type="submit" >Add Guitar</button>
+    </form>
+    
+    <script>
+         const myForm = document.getElementById('myForm');
+         myForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            fetch('https://localhost:44312/api/Guitar/AddGuitar', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: formData
+            });
+       });
+      // const btn = document.getElementsByClassName('addguitar__btn');
+
+      // btn[0].addEventListener('click', function (e){
+      //    const add = new AddOneGuitar();
+      //    add.addGuitar();
+      //    //console.log("message");
+      // });
+      //    ROOT_ADD_GUITAR_BTN[0].addEventListener('click', function (e) {
+      //       const addguitar = new AddGuitar();
+      //       addguitar.addguitar();
+      //   });
+    </script>
+    <script src="Catalog/addguitar.js"> </script>
+    <script src="constant/root.js"></script>
+</body>
+</html>

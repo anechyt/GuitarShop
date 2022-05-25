@@ -22,7 +22,7 @@ namespace GuitarShop.Backend.Api.Controllers
         }
 
         [HttpPost("AddGuitar")]
-        public IActionResult AddGuitar(Guitar guitar)
+        public IActionResult AddGuitar([FromBody] Guitar guitar)
         {
             _facade.AddGuitar(guitar);
             return Ok(guitar.Id);
